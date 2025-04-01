@@ -46,7 +46,9 @@ export const StaticPage = () => {
               <FaMoon className=" text-3xl" />
             )}
           </button>
-          <h1>DevConnect</h1>
+          <h1 className=" cursor-pointer" onClick={() => navigate("/")}>
+            DevConnect
+          </h1>
           <button
             onClick={() => setNavModal(true)}
             className="sm:hidden text-4xl flex justify-center align-center bg-[transparent] border-none cursor-pointer"

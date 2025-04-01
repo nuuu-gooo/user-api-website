@@ -7,6 +7,7 @@ export const UsersComp = (props) => {
   const [dataApi2, setDataApi2] = useState([]);
   // const [error, setError] = useState(undefined);
   const [loading, setLoading] = useState(false);
+
   //-----------SECOND "LIKES" API CALL-----------------//
   const getDataApi2 = async () => {
     try {
@@ -14,9 +15,8 @@ export const UsersComp = (props) => {
       let fetchData = await axios.get(
         ` https://dummyjson.com/posts/user/${users.id}`
       );
-      setDataApi2(fetchData.data.posts[0].reactions);
+      setDataApi2[Object.keys(fetchData.data.posts[0].reactions)];
     } catch (error) {
-      // setError(error);
     } finally {
       setLoading(false);
     }
@@ -41,7 +41,7 @@ export const UsersComp = (props) => {
         <p className="font-sans">Age: {users.age}</p>
         <div className="  flex  sm:flex justify-center align-middle">
           <FcLike onClick={() => setDataApi2(dataApi2 + 1)} />
-          <p>{dataApi2}</p>
+          {/* <p>{dataApi2}</p> */}
         </div>
         <Link className="text-3xl" to={` ${users.id}`}>
           <FcInfo />
